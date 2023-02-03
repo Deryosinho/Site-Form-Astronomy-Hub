@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --cor1: #c7ecff;
+  --cor2: #003c6e;
+  --cor3: #005fb1;
+  --cor4: #058df3;
+}
+
+.Container {
+  display: flex;
+}
+
+.left-side {
+  justify-content: center;
+  display: flex;
+  width: 600px;
+  height: 100vh;
+  background-image: url("img/jacob-dyer-NWIOx1BKZrc-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.left-side img {
+  margin-top: 50px;
+  width: 400px;
+  height: 80px;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #c7ecff;
+}
+
+.right-side {
+  margin: 0px 20% 0px 0px;
+}
+
+.right-side h1 {
+  font-size: 4em;
+  -webkit-text-stroke: 3px var(--cor2);
+}
+
+.right-side h2 {
+  font-size: 2.5em;
+  font-style: italic;
+}
+
+.right-side h2 span {
+  color: var(--cor3);
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 200px;
+  top: 150px;
+  width: 400px;
+  height: 70%;
+  background-image: linear-gradient(var(--cor2), var(--cor3));
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+}
+
+form h2 span {
+  color: var(--cor4);
+}
+
+form h3 {
+  color: #fff;
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 10px 0px;
+}
+
+form input {
+  border: none;
+  padding: 5px;
+  height: 25px;
+  outline: 0;
+  font-size: 1.1em;
+}
+
+form #alterPass {
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.form-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0px 0px 0px;
+}
+
+form a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+form .Cadastrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  background-color: var(--cor4);
+  width: 230px;
+  height: 50px;
+  padding: 40px;
+}
+
+form .Cadastrar:hover {
+  background-color: var(--cor3);
+}
+
+form .Login {
+  color: #fff;
+  -webkit-text-stroke: 0.3px #000;
+  font-size: 1.3em;
+  margin: 20px;
+}
+
+form .Login:hover {
+  color: var(--cor4);
+}
+
+@media (max-width: 1030px) {
+  .Container {
+    flex-direction: column;
+  }
+  .left-side {
+    width: 100%;
+  }
+  .left-side img {
+    margin: 50px 20px 0px 0px;
+    width: 400px;
+    height: 80px;
+  }
+  .flex-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background-color: #c7ecff;
+  }
+  .right-side {
+    margin: 0px;
+  }
+  .content-form {
+    flex-direction: column;
+    margin: auto;
+    height: 600px;
+    width: 350px;
+    left: 20px;
+  }
+}
