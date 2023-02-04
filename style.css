@@ -18,7 +18,9 @@
 
 .left-side {
   justify-content: center;
+  align-items: center;
   display: flex;
+  flex-direction: column;
   width: 600px;
   height: 100vh;
   background-image: url("img/jacob-dyer-NWIOx1BKZrc-unsplash.jpg");
@@ -43,7 +45,18 @@
 }
 
 .right-side {
-  margin: 0px 20% 0px 0px;
+  animation: animacao 4s forwards;
+}
+
+@keyframes animacao {
+  from {
+    opacity: 0;
+    margin: 0px 5% 0px 0px;
+  }
+  to {
+    opacity: 1;
+    margin: 0px 20% 0px 0px;
+  }
 }
 
 .right-side h1 {
@@ -63,13 +76,11 @@
 .content-form {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 200px;
-  top: 150px;
   width: 400px;
   height: 70%;
   background-image: linear-gradient(var(--cor2), var(--cor3));
   padding: 20px;
+  transform: translateX(200px);
 }
 
 form {
@@ -171,9 +182,10 @@ form .Login:hover {
   }
   .content-form {
     flex-direction: column;
+    transform: translateX(0px);
     margin: auto;
     height: 600px;
-    width: 350px;
-    left: 20px;
+    max-width: 95%;
+    min-width: 50%;
   }
 }
